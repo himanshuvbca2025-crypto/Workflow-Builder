@@ -1,0 +1,268 @@
+/* Reset */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* Body */
+
+body{
+
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color:  white;;
+    overflow-x: hidden;
+
+
+    background-image: url(assets/Hero.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+/* Header */
+header{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 30px;
+
+    background: rgba(20, 25, 50, 0.70);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255, 255,255,0.08);
+}
+
+
+/* Brand */
+
+.brand{
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+.logo{
+
+   width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+}
+
+
+/* Toolbar */
+
+.toolbar{
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* Buttons */
+
+.btn{
+
+    padding: 10px 18px;
+    
+    background: rgba(255,255,255,0.10);
+
+    color: white;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    transition: all .3s ease;
+
+}
+.btn:hover{
+
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(37,99,235,.35);
+
+}
+
+
+/* Main */
+
+.main-content{
+
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+
+}
+/* Workflow Canvas */
+
+#workflow-canvas{
+
+    flex: 1;
+    min-height: calc(100vh - 120px);
+
+    position: relative;
+    overflow: hidden;
+    
+    background:  rgba(30,41,59,0.80);
+
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+}
+
+#connections{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+
+    z-index: 1;
+    overflow: visible;
+
+}
+
+line{
+
+    pointer-events: stroke;
+    cursor: pointer;
+
+}
+.node{
+
+    position: absolute;
+    z-index: 2;
+    width: 160px;
+    height: 80px;
+    background: #1E293B;
+    border: 2px solid #2563EB;
+    border-radius: 12px;
+    color: white;
+    cursor: move;
+    box-shadow: 0 8px 20px rgba(0,0,0,.35);
+    transition: .3s;
+
+}
+.node:hover{
+
+    transform: scale(1.03);
+    border-color: #60A5FA;
+}
+
+.node-header{
+
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+}
+
+.node-input{
+
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background: #10B981;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.node-output{
+
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background: #EF4444;
+    border-radius: 50%;
+    border: 2px solid white;
+
+}
+
+/* Status Panel */
+#status-panel{
+
+    width: 280px;
+    background: rgba(30,41,59,.8);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.status-card{
+
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+
+    padding: 18px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+
+}
+.status-card h3{
+
+    font-size: 16px;
+    font-weight: 600;
+    color: #CBD5E1;
+    
+}
+
+.status-card span{
+
+    font-size: 28px;
+    font-weight: bold;
+    color: #60A5FA;
+}
+.status-card{
+
+    margin-bottom: 20px;
+
+}
+
+/* Responsive */
+
+
+ 

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>WorkFlow Builder</title>
+</head>
+
+
+<body>
+
+    <!-- ================= Header Section ================= -->
+
+  <header>
+
+    <div class="brand">
+        
+    <img  class="logo"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5YEMVO-rqgr2auzBezqTxSIRI5063aEpB6lmr_4ueyg&s=10" alt="Logo">
+    <h1>Workflow Builder</h1>
+
+    </div>
+
+    <div class="toolbar">
+
+    <button class="btn" id="add-node-btn">
+        ➕ Add Node
+    </button>
+    <button class="btn" id="delete-node-btn">
+        ❌Delete Node
+    </button>
+    <button class="btn"id="delete-edge-btn">
+        ❌ Delete Edge
+    </button>
+    <button class="btn" id="run-workflow-btn">
+        ▶ Run Workflow
+     </button>
+
+    </div>
+    
+  </header> 
+
+  <!-- ================= Main Section ================= -->
+
+  <main class="main-content">
+
+    <div id="workflow-canvas">
+
+    <svg id="connections"></svg>
+
+    </div>
+
+
+    <!-- ================= Status Panel ================= -->
+
+    <div id="status-panel">
+
+        <div class="status-card">
+            <h3>Total Nodes</h3>
+            <span id="node-count">0</span>
+        </div>
+
+        <div class="status-card">
+            <h3>Total Edges</h3>
+            <span id="edge-count">0</span>
+        </div>
+
+        <div class="status-card">
+            <h3>DAG Status</h3>
+            <span id="dag-status">True</span>
+        </div>
+
+        <div class="status-card">
+        <h3>Workflow Status</h3>
+        <span id="workflow-status">Waiting</span>
+        </div>
+
+    </div>
+
+     </main>
+
+     <script src="script.js"></script>
+
+
+</body>
+</html>
